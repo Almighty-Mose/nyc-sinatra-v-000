@@ -9,7 +9,7 @@
     <ul>
       <% Landmark.all.each do |landmark| %>
         <li><label><%= landmark.name %></label>
-        <input id="landmark_<%= landmark.id %>" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>"></li>
+        <input id="landmark_<%= landmark.id %>" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>" <%='checked' if @figure.landmarks.include?(landmark) %>></li>
       <% end %>
     </ul>
 
