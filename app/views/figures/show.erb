@@ -1,3 +1,9 @@
 <h1>Here's Your Historical Figure!</h1>
 
 <div> <%= @figure.name %> </div>
+
+<h3>Their Landmarks:</h3>
+<ul>
+  <% @figure.landmarks.each do |landmark| %>
+    <li><%= landmark.name %></li>
+  <% end %>
