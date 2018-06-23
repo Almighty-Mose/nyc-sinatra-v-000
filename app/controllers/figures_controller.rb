@@ -35,6 +35,7 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:id' do
+    binding.pry
     @figure = Figure.find_by_id(params[:id])
     @figure.name = params[:name]
     @figure.titles << Title.find_or_create_by(params[:title])
