@@ -5,7 +5,7 @@
   <p><label for="name">Name:</label>
     <input type="text" name="figure[name]" id="figure_name" value="<%=@figure.name%>"></p>
 
-  <h3>Landmarks</h3>
+  <h3>Edit Landmarks</h3>
     <ul>
       <% Landmark.all.each do |landmark| %>
         <li><label><%= landmark.name %></label>
@@ -19,7 +19,7 @@
     <label for="year">Year Completed: </label>
     <input type="text" name="landmark[year_completed]">
 
-  <h3>Titles</h3>
+  <h3>Edit Titles</h3>
     <ul>
       <% Title.all.each do |title| %>
         <li><label><%= title.name %></label>
