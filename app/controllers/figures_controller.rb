@@ -19,13 +19,13 @@ class FiguresController < ApplicationController
       @figure.titles << Title.create(params[:title])
     end
 
-    erb :'figures/:id'
+    redirect "figures/#{@figure.id}"
   end
 
   get '/figures/:id' do
     @figure = Figure.find_by_id(params[:id])
 
-    erb :'figures/:id'
+    erb :'figures/show'
   end
 
 end
