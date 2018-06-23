@@ -22,4 +22,10 @@ class FiguresController < ApplicationController
     erb :'figures/:id'
   end
 
+  get '/figures/:id' do
+    @figure = Figure.find_by_id(params[:id])
+
+    erb :'figures/:id'
+  end
+
 end
